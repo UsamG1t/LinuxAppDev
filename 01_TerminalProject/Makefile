@@ -1,10 +1,13 @@
 SRC=curses.c
 EXE=curses
 CC=cc
-LIBS=-lcurses
+LDLIBS=-lncursesw
 CFLAGS=-Wall
 
-%:	%.c
-	$(CC) $(CFLAGS) $< $(LIBS) -o $@
-# Обязательна ТАБУЛЯЦИЯ
-# Cначала файл, потом библиотеки, порядок важен
+%:  %.c
+	$(CC) $(CFLAGS) $< $(LDLIBS) -o $@
+
+all:	curses
+
+clean:
+	rm -f o oo ${EXE} *.o
