@@ -1,13 +1,13 @@
-SRC=Show.c
-EXE=Show
+SRC=curses.c
+EXE=curses
 CC=cc
 LDLIBS=-lncursesw
 CFLAGS=-Wall
 
-all:	Show
-
 %:  %.c
 	$(CC) $(CFLAGS) $< $(LDLIBS) -o $@
+
+all:	curses
 
 clean:
 	rm -f o oo ${EXE} *.o
