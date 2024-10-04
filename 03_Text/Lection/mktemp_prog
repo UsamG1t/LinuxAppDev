@@ -1,0 +1,16 @@
+#!/bin/sh
+exit_handler() {
+  trap - EXIT
+  test -r "$TMPFILE" && rm -vf "$TMPFILE"
+}
+trap exit_handler EXIT HUP INT QUIT PIPE TERM
+echo -n "Create a file? "
+read YN
+if [ "$YN" = y ]; then
+        TMPFILE="$(mktemp)"
+        echo "$TMPFILE"
+        ls -l "$TMPFILE"
+fi
+echo -n "Wait…"
+read
+echo "Done"
