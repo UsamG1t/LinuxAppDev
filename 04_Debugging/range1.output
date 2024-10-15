@@ -1,0 +1,24 @@
+Breakpoint 1 at 0x401276: file range.c, line 29.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.opensuse.org/>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffdad8) at range.c:29
+29					printf("%d\n", i);
+$1 = 5
+$2 = 1
+$3 = 12
+$4 = 1
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffdad8) at range.c:29
+29					printf("%d\n", i);
+$5 = 10
+$6 = 1
+$7 = 12
+$8 = 1
+[Inferior 1 (process 485473) exited normally]
