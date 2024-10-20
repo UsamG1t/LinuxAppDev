@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     regmatch_t bags[MAXGR];
     
 
-    if (regcomp(&regex, argv[1], REG_EXTENDED)) {
+    if (regcomp(&regex, argv[1], REG_EXTENDED)) { // используем расширенные RegExprs
     	_exit(1);
     }
 
@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
         	for (int i = 0; i < MAXGR && bags[i].rm_so >= 0; i++ ) {
         		begin = bags[i].rm_so;
         		end = bags[i].rm_eo;
-        		printf("%d: %.*s\n", i, end - begin, buf + begin);
+        		printf("%d (%d - %d): %.*s\n", i, begin, end, end - begin, buf + begin);
         	}
         }
         
