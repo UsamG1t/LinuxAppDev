@@ -1,0 +1,14 @@
+Error: :There are not enough files to move
+Error: :There are not enough files to move
+Error with 1st file: : Permission denied
+Hello
+Error with 2nd file: : Bad file descriptor
+Hello
+Error with read-ability of file: : Input/output error
+Hello
+Error with write-ability of file: : File too large
+Hello
+Error during delete 1st file: : Is a directory
+Bye
+Hello
+Bye
