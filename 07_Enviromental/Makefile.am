@@ -4,10 +4,10 @@ bin_PROGRAMS=rhasher
 
 rhasher_SOURCES=rhasher.c
 
-# TESTS=isterm.sh
+# TESTS=readline.sh
 
-# isterm.sh:
-# 	echo 'test "`./key < /dev/null 2>&1`" = "./key: Not a terminal"' > $@
+# readline.sh:
+# 	echo 'test `echo b1b3773a05c0ed0176787a4f1574ff0075f7521e` = "b1b3773a05c0ed0176787a4f1574ff0075f7521e"' > $@
 # 	chmod +x $@
 
 gitclean:

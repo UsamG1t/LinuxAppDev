@@ -4,9 +4,12 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include "rhash.h" /* LibRHash interface */
+#include "config.h"
 
-#ifndef NO_READLINE
+#ifdef NO_READLINE
 #define NO_READLINE 1
+#else
+#define NO_READLINE 0
 #endif
 
 enum
@@ -17,11 +20,10 @@ enum
     DST_SIZE = 130
 };
 
-
 int my_read(char** buf, size_t* len) {
-    if (!NO_READLINE) {
+    if (HAVE_LIBREADLINE && !NO_READLINE) {
         *buf = readline("> ");
-        if (*buf && **buf) {
+        if (*buf && **buf && **buf != '\n') {
             *len = strlen(*buf);
             add_history(*buf);
         }
@@ -36,7 +38,7 @@ int main(int argc, char** argv) {
 char hash_type[HASH_SIZE] = {};
 char src[SRC_SIZE] = {};
 
-char digest[DIGEST_SIZE];
+unsigned char digest[DIGEST_SIZE];
 char dst[DST_SIZE];
 
 int hash_flag = 0;
@@ -48,8 +50,8 @@ rhash_library_init(); /* initialize static data */
 char* buf = NULL;
 size_t len = 0;
 
-if (!NO_READLINE) {
-    printf("<>\n");
+if (HAVE_LIBREADLINE && !NO_READLINE) {
+    // printf("<>\n");
     rl_bind_key('\t', rl_insert);
 }
 

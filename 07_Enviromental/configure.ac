@@ -4,7 +4,7 @@
 AC_PREREQ([2.72])
 AC_INIT([Key Logger], [0.0], [Stephen])
 AC_CONFIG_SRCDIR([rhasher.c])
-# AM_INIT_AUTOMAKE([foreign subdir-objects])
+AM_INIT_AUTOMAKE([foreign subdir-objects])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
@@ -24,8 +24,8 @@ AC_CHECK_HEADERS([rhash.h])
 
 
 # Optional clues
-AC_ARG_ENABLE([keypad],
-    AS_HELP_STRING([--without-readline], [Enable force input without readline]),
+AC_ARG_WITH([readline],
+    AS_HELP_STRING([--without-readline],[Enable force input without readline]),
     AC_DEFINE(NO_READLINE,[1],[Input without readline])
   )
 
@@ -36,5 +36,5 @@ AC_TYPE_SIZE_T
 # Checks for library functions.
 AC_CHECK_FUNCS([strerror])
 
-# AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
