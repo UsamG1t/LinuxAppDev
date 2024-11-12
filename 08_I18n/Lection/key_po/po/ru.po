@@ -1,0 +1,29 @@
+# Russian translations for Key logger package
+# Английские переводы для пакета Key logger.
+# Copyright (C) 2024 THE Key logger'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Key logger package.
+# Fr. Br. George <george@linuxprac.box.office.basealt.ru>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Key logger 0.00\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-05 15:02+0000\n"
+"PO-Revision-Date: 2024-11-04 20:31+0000\n"
+"Last-Translator: Fr. Br. George <george@linuxprac.box.office.basealt.ru>\n"
+"Language-Team: Russian <gnu@d07.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../src/key.c:22
+msgid "Not a terminal"
+msgstr "Это не терминал"
+
+#: ../src/key.c:37
+#, c-format
+msgid "  Key: %d, Name: %s\n"
+msgstr "  Клавиша: %d, Имя: %s\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  08_I18n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-12 09:13+0300\n"
+"POT-Creation-Date: 2024-11-12 09:45+0300\n"
 "PO-Revision-Date: 2024-11-12 08:23+0300\n"
 "Last-Translator: Stephen <stephen@localhost>\n"
 "Language-Team: Russian <gnu@d07.ru>\n"
@@ -20,12 +20,13 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Simple text
-#: ahello.c:21
+#: ../src/ahello.c:21
 msgid "Hello World\n"
 msgstr "Привет, Мир\n"
 
+# c-format
 #. Plural example
-#: ahello.c:25
+#: ../src/ahello.c:25
 #, c-format
 msgid "Hello, %d World\n"
 msgid_plural "Hello, %d Worlds\n"
