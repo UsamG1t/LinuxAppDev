@@ -4,7 +4,7 @@
 AC_PREREQ([2.72])
 AC_INIT([L10n gettext ex], [0.0], [Stephen])
 AM_INIT_AUTOMAKE([foreign])
-AC_CONFIG_SRCDIR([ahello.c])
+AC_CONFIG_SRCDIR([src/ahello.c])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
@@ -18,5 +18,5 @@ AC_PROG_CC
 
 # Checks for library functions.
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile po/Makefile src/Makefile])
 AC_OUTPUT

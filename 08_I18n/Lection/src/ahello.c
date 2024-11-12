@@ -5,7 +5,7 @@
 #include <locale.h>
 
 #define _(STRING) gettext(STRING)
-#define LOCALE_PATH "."
+#define LOCALE_PATH "po"
 
 int main(int argc, char *argv[])
 {
@@ -14,15 +14,15 @@ int main(int argc, char *argv[])
 
 	dir = dirname(realpath(argv[0], NULL));
 	setlocale (LC_ALL, "");
-	bindtextdomain ("ahello", LOCALE_PATH); // имя домена выбираем сами. Домен - множество переведённых строк
+	bindtextdomain ("ahello", LOCALE_PATH);
 	textdomain ("ahello");
 
 	/* Simple text */
 	puts(_("Hello World\n"));
 
-	for(i=0; i<5; i++)
-		/* Loosy plural example */
-		printf(_("Hello, %d World\n"), i);
+	for(i=0; i<6; i++)
+		/* Plural example */
+		printf(ngettext("Hello, %d World\n", "Hello, %d Worlds\n", i), i);
 
 	return 0;
 }

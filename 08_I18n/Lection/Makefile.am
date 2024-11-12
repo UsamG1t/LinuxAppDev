@@ -1,1 +1,1 @@
-bin_PROGRAMS=ahello
+SUBDIRS = src po
