@@ -1,0 +1,4 @@
+libnamegen.lo: libnamegen.c /usr/include/stdc-predef.h namegen.h const.h
+/usr/include/stdc-predef.h:
+namegen.h:
+const.h:
